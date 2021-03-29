@@ -19,13 +19,12 @@ public class Contenedor extends Canvas{
         x = 30;
         y = 30;
         isClicked = false;
-        
-        images = new Image[4];
-        String pathImage = "recursos/cancha.jpg";
+        images = new Image[5];
+        String pathImage = "/Users/LizzerPoolHuchim/Documents/GitHub/TAP-4A/ejerciciosjava/ejercicio8/recursos/fondo.jpg";
         imagen = Toolkit.getDefaultToolkit().getImage(pathImage);
         this.t = 0;
-        for(int i=1;i <= 4; i++) {
-            images[i-1] = Toolkit.getDefaultToolkit().getImage("recursos/" + i + ".png");
+        for(int i=1;i <= 5; i++) {
+            images[i-1] = Toolkit.getDefaultToolkit().getImage("/Users/LizzerPoolHuchim/Documents/GitHub/TAP-4A/ejerciciosjava/ejercicio8/recursos/" + i + ".png");
         }
     }
 
@@ -35,11 +34,7 @@ public class Contenedor extends Canvas{
         Graphics miG = buffer.getGraphics();
         miG.setColor(Color.white);
         miG.fillRect(0,0, 1024, 500);
-        // g.setColor(Color.yellow);
-        // g.fillOval(x, y, w, h);
-        // g.setColor(Color.black);
-        // g.fillOval(x + 30, y + 30, (int)(w * 0.30), (int)(h * 0.30));
-        miG.drawImage(imagen, 0, 0, 1024,400, this);
+        miG.drawImage(imagen, 0, 0, 1024,500, this);
         miG.drawImage(images[this.t], x, y+100, this);
         g2d.drawImage(buffer, 0, 0, this);
     }

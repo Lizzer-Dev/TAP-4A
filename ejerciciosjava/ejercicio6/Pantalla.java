@@ -1,6 +1,9 @@
-package ejerciciosjava.ejercicio8;
+package ejerciciosjava.ejercicio6;
 import java.awt.Frame;
 import java.awt.event.*;
+
+import ejerciciosjava.ejercicio5.Contenedor;
+
 public class Pantalla extends Frame implements MouseListener, MouseMotionListener, KeyListener {
 
     /**
@@ -26,7 +29,7 @@ public class Pantalla extends Frame implements MouseListener, MouseMotionListene
         this.addKeyListener(this);
         this.add(obj_pintable);
 
-        this.setSize(1024,500);
+        this.setSize(500,500);
         this.setVisible(true);
     }
 
@@ -98,22 +101,21 @@ public class Pantalla extends Frame implements MouseListener, MouseMotionListene
             switch(arg0.getKeyChar()) {
                 case 'd':
                 case 'D':
-                    obj_pintable.setX(obj_pintable.getX() + 10);
-                    obj_pintable.tick();
+                    obj_pintable.setX(obj_pintable.getX() + 1);
+
                     break;
                 case 'a':
                 case 'A':
-                    obj_pintable.setX(obj_pintable.getX() - 10);
-                    obj_pintable.tick();
+                    obj_pintable.setX(obj_pintable.getX() - 1);
                     break;
                 case 'w':
                 case 'W':
-                    obj_pintable.setY(obj_pintable.getY() - 10);
+                    obj_pintable.setY(obj_pintable.getY() - 1);
 
                     break;
                 case 's':
                 case 'S':
-                    obj_pintable.setY(obj_pintable.getY() + 10);
+                    obj_pintable.setY(obj_pintable.getY() + 1);
                     break;
 
             }
