@@ -27,18 +27,21 @@ namespace ejercicio5
         {
             x = 20;
             y = 40;
+            area_pintable.Invalidate();
         }
 
         private void area_pintable_MouseClick(object sender, MouseEventArgs e)
         {
             setX(e.X);
             setY(e.Y);
+            area_pintable.Invalidate();
         }
 
         private void area_pintable_MouseDoubleClick(object sender, MouseEventArgs e)
         {
             setX(e.X);
             setY(e.Y);
+            area_pintable.Invalidate();
         }
 
         public Form1()
