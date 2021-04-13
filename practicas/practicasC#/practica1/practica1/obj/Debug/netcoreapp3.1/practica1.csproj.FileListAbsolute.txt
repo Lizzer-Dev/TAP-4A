@@ -1,0 +1,15 @@
+C:\Users\Lizzer Pool Huchim\Documents\GitHub\TAP-4A\practicas\practicasC#\practica1\practica1\bin\Debug\netcoreapp3.1\practica1.exe
+C:\Users\Lizzer Pool Huchim\Documents\GitHub\TAP-4A\practicas\practicasC#\practica1\practica1\bin\Debug\netcoreapp3.1\practica1.deps.json
+C:\Users\Lizzer Pool Huchim\Documents\GitHub\TAP-4A\practicas\practicasC#\practica1\practica1\bin\Debug\netcoreapp3.1\practica1.runtimeconfig.json
+C:\Users\Lizzer Pool Huchim\Documents\GitHub\TAP-4A\practicas\practicasC#\practica1\practica1\bin\Debug\netcoreapp3.1\practica1.runtimeconfig.dev.json
+C:\Users\Lizzer Pool Huchim\Documents\GitHub\TAP-4A\practicas\practicasC#\practica1\practica1\bin\Debug\netcoreapp3.1\practica1.dll
+C:\Users\Lizzer Pool Huchim\Documents\GitHub\TAP-4A\practicas\practicasC#\practica1\practica1\bin\Debug\netcoreapp3.1\practica1.pdb
+C:\Users\Lizzer Pool Huchim\Documents\GitHub\TAP-4A\practicas\practicasC#\practica1\practica1\obj\Debug\netcoreapp3.1\practica1.csprojAssemblyReference.cache
+C:\Users\Lizzer Pool Huchim\Documents\GitHub\TAP-4A\practicas\practicasC#\practica1\practica1\obj\Debug\netcoreapp3.1\practica1.Form1.resources
+C:\Users\Lizzer Pool Huchim\Documents\GitHub\TAP-4A\practicas\practicasC#\practica1\practica1\obj\Debug\netcoreapp3.1\practica1.csproj.GenerateResource.cache
+C:\Users\Lizzer Pool Huchim\Documents\GitHub\TAP-4A\practicas\practicasC#\practica1\practica1\obj\Debug\netcoreapp3.1\practica1.AssemblyInfoInputs.cache
+C:\Users\Lizzer Pool Huchim\Documents\GitHub\TAP-4A\practicas\practicasC#\practica1\practica1\obj\Debug\netcoreapp3.1\practica1.AssemblyInfo.cs
+C:\Users\Lizzer Pool Huchim\Documents\GitHub\TAP-4A\practicas\practicasC#\practica1\practica1\obj\Debug\netcoreapp3.1\practica1.csproj.CoreCompileInputs.cache
+C:\Users\Lizzer Pool Huchim\Documents\GitHub\TAP-4A\practicas\practicasC#\practica1\practica1\obj\Debug\netcoreapp3.1\practica1.dll
+C:\Users\Lizzer Pool Huchim\Documents\GitHub\TAP-4A\practicas\practicasC#\practica1\practica1\obj\Debug\netcoreapp3.1\practica1.pdb
+C:\Users\Lizzer Pool Huchim\Documents\GitHub\TAP-4A\practicas\practicasC#\practica1\practica1\obj\Debug\netcoreapp3.1\practica1.genruntimeconfig.cache
