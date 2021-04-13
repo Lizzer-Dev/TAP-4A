@@ -1,0 +1,14 @@
+C:\Users\Lizzer Pool Huchim\Documents\GitHub\TAP-4A\ejerciciosc#\ejercicio6\ejercicio6\bin\Debug\netcoreapp3.1\ejercicio6.exe
+C:\Users\Lizzer Pool Huchim\Documents\GitHub\TAP-4A\ejerciciosc#\ejercicio6\ejercicio6\bin\Debug\netcoreapp3.1\ejercicio6.deps.json
+C:\Users\Lizzer Pool Huchim\Documents\GitHub\TAP-4A\ejerciciosc#\ejercicio6\ejercicio6\bin\Debug\netcoreapp3.1\ejercicio6.runtimeconfig.json
+C:\Users\Lizzer Pool Huchim\Documents\GitHub\TAP-4A\ejerciciosc#\ejercicio6\ejercicio6\bin\Debug\netcoreapp3.1\ejercicio6.runtimeconfig.dev.json
+C:\Users\Lizzer Pool Huchim\Documents\GitHub\TAP-4A\ejerciciosc#\ejercicio6\ejercicio6\bin\Debug\netcoreapp3.1\ejercicio6.dll
+C:\Users\Lizzer Pool Huchim\Documents\GitHub\TAP-4A\ejerciciosc#\ejercicio6\ejercicio6\bin\Debug\netcoreapp3.1\ejercicio6.pdb
+C:\Users\Lizzer Pool Huchim\Documents\GitHub\TAP-4A\ejerciciosc#\ejercicio6\ejercicio6\obj\Debug\netcoreapp3.1\ejercicio6.Form1.resources
+C:\Users\Lizzer Pool Huchim\Documents\GitHub\TAP-4A\ejerciciosc#\ejercicio6\ejercicio6\obj\Debug\netcoreapp3.1\ejercicio6.csproj.GenerateResource.cache
+C:\Users\Lizzer Pool Huchim\Documents\GitHub\TAP-4A\ejerciciosc#\ejercicio6\ejercicio6\obj\Debug\netcoreapp3.1\ejercicio6.AssemblyInfoInputs.cache
+C:\Users\Lizzer Pool Huchim\Documents\GitHub\TAP-4A\ejerciciosc#\ejercicio6\ejercicio6\obj\Debug\netcoreapp3.1\ejercicio6.AssemblyInfo.cs
+C:\Users\Lizzer Pool Huchim\Documents\GitHub\TAP-4A\ejerciciosc#\ejercicio6\ejercicio6\obj\Debug\netcoreapp3.1\ejercicio6.csproj.CoreCompileInputs.cache
+C:\Users\Lizzer Pool Huchim\Documents\GitHub\TAP-4A\ejerciciosc#\ejercicio6\ejercicio6\obj\Debug\netcoreapp3.1\ejercicio6.dll
+C:\Users\Lizzer Pool Huchim\Documents\GitHub\TAP-4A\ejerciciosc#\ejercicio6\ejercicio6\obj\Debug\netcoreapp3.1\ejercicio6.pdb
+C:\Users\Lizzer Pool Huchim\Documents\GitHub\TAP-4A\ejerciciosc#\ejercicio6\ejercicio6\obj\Debug\netcoreapp3.1\ejercicio6.genruntimeconfig.cache
