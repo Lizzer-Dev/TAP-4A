@@ -1,7 +1,6 @@
 package proyecto;
 import java.awt.*;
 import javax.swing.plaf.DimensionUIResource;
-import javax.swing.Icon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -31,13 +30,14 @@ public class Reproductor extends JFrame implements ActionListener{
         this.setVisible(true);
         this.setDefaultCloseOperation(EXIT_ON_CLOSE);
         this.setLocationRelativeTo(null);
-        this.setBackground(Color.WHITE);
-        this.setLayout(new BorderLayout(5,5));
+        this.setBackground(Color.BLACK);
+        this.setLayout(new BorderLayout(10,10));
         //PANEL CENTRAL
         panelCentral();
         panelIzquierdo();
         panelSuperior();
         panelDerecho();
+        panelInferior();
         
         
 
@@ -46,7 +46,7 @@ public class Reproductor extends JFrame implements ActionListener{
     public void panelIzquierdo(){
         panelizquierdo= new JPanel();
         panelizquierdo.setLayout(new FlowLayout());
-        panelizquierdo.setBackground(Color.DARK_GRAY);
+        panelizquierdo.setBackground(Color.LIGHT_GRAY);
         panelizquierdo.setPreferredSize(new DimensionUIResource(250,700));
         btn_abrir=new JButton("Abrir archivo");
         btn_abrir.addActionListener(this);
@@ -57,7 +57,7 @@ public class Reproductor extends JFrame implements ActionListener{
     public void panelDerecho(){
         panelderecho=new JPanel();
         panelderecho.setLayout(new GridLayout(2,5));
-        panelderecho.setBackground(Color.ORANGE);
+        panelderecho.setBackground(Color.LIGHT_GRAY);
         panelderecho.setPreferredSize(new DimensionUIResource(250,700));
         this.add(panelderecho,BorderLayout.EAST);
     }
@@ -67,16 +67,29 @@ public class Reproductor extends JFrame implements ActionListener{
         panelsuperior.setLayout(new FlowLayout());
         panelsuperior.setBackground(Color.BLACK);
         panelsuperior.setPreferredSize(new DimensionUIResource(100,100));
+        Font fuente= new Font("",3,25);
+        lbl_titulo=new JLabel();
+        lbl_titulo.setFont(fuente);
+        lbl_titulo.setText("Reproductor de audio");
+        lbl_titulo.setForeground(Color.WHITE);
+        panelsuperior.add(lbl_titulo);
         this.add(panelsuperior,BorderLayout.NORTH);
     }
+
+    public void panelInferior(){
+        panelinferior=new JPanel();
+        panelinferior.setBackground(Color.BLUE);
+        panelinferior.setPreferredSize(new DimensionUIResource(1000,50));
+        this.add(panelinferior,BorderLayout.SOUTH);
+    }
+
 
     public void panelCentral(){
         panelcentral=new JPanel();
         panelcentral.setLayout(new BorderLayout());
-        panelcentral.setBackground(Color.DARK_GRAY);
+        panelcentral.setBackground(Color.WHITE);
         portada=Toolkit.getDefaultToolkit().getImage("recursos/portada.jpg");
         btn_play=new JButton("Play");
-        btn_play.setBackground(Color.DARK_GRAY);
         btn_play.addActionListener(this);
         btn_anterior=new JButton("Anterior");
         btn_anterior.addActionListener(this);
