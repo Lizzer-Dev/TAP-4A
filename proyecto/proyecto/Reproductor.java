@@ -117,9 +117,10 @@ public class Reproductor extends JFrame implements ActionListener{
         btn_siguiente.addActionListener(this);
         panelsubcentral=new JPanel();
         panelsubcentralsup=new JPanel();
-        panelsubcentralsup.setBackground(new Color(34));
+        panelsubcentralsup.setBackground(new Color(345));
+        panelsubcentralsup.setOpaque(true);
         lbl_leiz=new JLabel();
-        Font fuente2= new Font("",4,25);
+        Font fuente2= new Font("",5,25);
         lbl_leiz.setFont(fuente2);
         lbl_leiz.setForeground(Color.WHITE);
         panelsubcentralsup.add(lbl_leiz);
