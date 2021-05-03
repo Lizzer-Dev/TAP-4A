@@ -1,5 +1,12 @@
 package ejerciciochat;
+import javax.swing.*;
+import java.awt.event.*;
+public class Cliente extends JFrame implements ActionListener {
 
-public class Cliente {
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        // TODO Auto-generated method stub
+        
+    }
     
 }
