@@ -21,7 +21,7 @@ public class HiloServidor extends Thread {
     }
     public String getIp(){
         InetAddress ip=c.getInetAddress();
-        String texto="\nUsuario ("+cont+") se conecto como:"+ip.getHostAddress();
+        String texto="\nUsuario ("+cont+") se conecto desde:"+ip.getHostAddress();
         return texto;
     }
 }

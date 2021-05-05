@@ -10,7 +10,7 @@ import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
 import javax.swing.ScrollPaneConstants;
 import javax.swing.plaf.DimensionUIResource;
-
+import java.awt.Font;
 import java.awt.event.*;
 import java.io.IOException;
 import java.net.ServerSocket;
@@ -62,7 +62,10 @@ public class Servidor extends JFrame implements ActionListener {
         //PANEL SUPERIOR
         panelsup=new JPanel();
         panelsup.setBackground(new Color(46, 64, 83));
+        Font fuente= new Font("",3,25);
         lbl_titulo=new JLabel("SERVIDOR DEL CHAT");
+        lbl_titulo.setFont(fuente);
+
         lbl_titulo.setForeground(Color.WHITE);
         panelsup.add(lbl_titulo);
         this.add(panelsup,BorderLayout.NORTH);
@@ -84,14 +87,12 @@ public class Servidor extends JFrame implements ActionListener {
     }
     @Override
     public void actionPerformed(ActionEvent e) {
-        // TODO Auto-generated method stub
         
     }
     public static void main(String[] args) {
         try {
             Servidor serv=new Servidor();
         } catch (IOException e) {
-            // TODO Auto-generated catch block
             e.printStackTrace();
         }
     }
