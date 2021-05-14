@@ -1,4 +1,4 @@
-package ejerciciosjava.ejercicioBlocNotas;
+package ejerciciosjava.ejercicioblocnotas;
 import java.awt.event.*;
 import java.io.*;
 import javax.swing.JButton;

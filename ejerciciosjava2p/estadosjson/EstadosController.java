@@ -33,7 +33,7 @@ public class EstadosController {
         JSONParser parser = new JSONParser();
         Object obj = parser.parse(response);
         JSONObject object = (JSONObject) obj; 
-        JSONArray array = (JSONArray) object.get("countries");
+        JSONArray array = (JSONArray) object.get("id");
         ArrayList<Estados> countries = new ArrayList<>();
         for(int i=0;i<array.size();i++) {
             JSONObject country = (JSONObject) array.get(i);
