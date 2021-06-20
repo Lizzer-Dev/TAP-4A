@@ -1,7 +1,10 @@
 {
     "java.project.sourcePaths": [
-        "ejerciciosjava2p/ejercicio1",
         "ejerciciosjava2p",
-        "ejerciciosjava/ejercicioBlocNotas"
+        "practicas/practicasjava/practica4"
+    ],
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar",
+        "/Users/Lizzer Pool/Downloads/sqlite-jdbc-3.8.10.1.jar"
     ]
 }

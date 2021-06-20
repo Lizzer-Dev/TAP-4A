@@ -1,0 +1,105 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Launch Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "Launch DataBase",
+            "request": "launch",
+            "mainClass": "comunicacion.DataBase",
+            "projectName": "TAP-4A_6e86a481"
+        },
+        {
+            "type": "java",
+            "name": "Launch Servidor",
+            "request": "launch",
+            "mainClass": "comunicacion.Servidor",
+            "projectName": "TAP-4A_6e86a481"
+        },
+        {
+            "type": "java",
+            "name": "Launch CountriesController",
+            "request": "launch",
+            "mainClass": "consumojson.CountriesController",
+            "projectName": "TAP-4A_6e86a481"
+        },
+        {
+            "type": "java",
+            "name": "Launch Cliente",
+            "request": "launch",
+            "mainClass": "ejercicio2.Cliente",
+            "projectName": "TAP-4A_6e86a481"
+        },
+        {
+            "type": "java",
+            "name": "Launch Servidor(1)",
+            "request": "launch",
+            "mainClass": "ejercicio2.Servidor",
+            "projectName": "TAP-4A_6e86a481"
+        },
+        {
+            "type": "java",
+            "name": "Launch Cliente(1)",
+            "request": "launch",
+            "mainClass": "ejerciciochat.Cliente",
+            "projectName": "TAP-4A_6e86a481"
+        },
+        {
+            "type": "java",
+            "name": "Launch Servidor(2)",
+            "request": "launch",
+            "mainClass": "ejerciciochat.Servidor",
+            "projectName": "TAP-4A_6e86a481"
+        },
+        {
+            "type": "java",
+            "name": "Launch Cliente(2)",
+            "request": "launch",
+            "mainClass": "ejercicios1.Cliente",
+            "projectName": "TAP-4A_6e86a481"
+        },
+        {
+            "type": "java",
+            "name": "Launch Servidor(3)",
+            "request": "launch",
+            "mainClass": "ejercicios1.Servidor",
+            "projectName": "TAP-4A_6e86a481"
+        },
+        {
+            "type": "java",
+            "name": "Launch GuiBatallaNaval",
+            "request": "launch",
+            "mainClass": "interfaz.GuiBatallaNaval",
+            "projectName": "TAP-4A_6e86a481"
+        },
+        {
+            "type": "java",
+            "name": "Launch Tablero",
+            "request": "launch",
+            "mainClass": "logica.Tablero",
+            "projectName": "TAP-4A_6e86a481"
+        },
+        {
+            "type": "java",
+            "name": "Launch Main",
+            "request": "launch",
+            "mainClass": "productorconsumidor.Main",
+            "projectName": "TAP-4A_6e86a481"
+        },
+        {
+            "type": "java",
+            "name": "Launch Productor",
+            "request": "launch",
+            "mainClass": "productorconsumidor.Productor",
+            "projectName": "TAP-4A_6e86a481"
+        }
+    ]
+}

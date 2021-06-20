@@ -18,6 +18,15 @@ public class HiloCliente extends Thread{
     public String getNombre(){
         return nombre;
     }
+    public void run(){
+        while (true) {
+            try {
+                
+            } catch (Exception e) {
+                //TODO: handle exception
+            }
+        }
+    }
     public void write(String mensaje) throws IOException {
         out.println(mensaje);
         out.flush();
