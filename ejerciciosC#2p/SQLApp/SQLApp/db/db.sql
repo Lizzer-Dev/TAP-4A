@@ -1,0 +1,1 @@
+﻿CREATE table ESTADOS(id, name, surface);
