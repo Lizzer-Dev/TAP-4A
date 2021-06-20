@@ -3,6 +3,7 @@ import java.awt.FlowLayout;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JTextArea;
 import javax.swing.plaf.DimensionUIResource;
@@ -20,7 +21,7 @@ import java.net.UnknownHostException;
 import java.sql.SQLException;
 public class GuiBatallaNaval extends JFrame implements ActionListener{
     Jugador jugador1;
-    JButton btn_1vs1,btn_1vSystem,btn_disparar,btn_guardar,btn_MostrarGan;
+    JButton btn_1vs1,btn_1vSystem,btn_disparar,btn_guardar,btn_MostrarGan,btn_ceder;
     JPanel panel_sup,panel_inf,panel_der,panel_izq, panel_c,panel_inf2,panel_sup2;
     JLabel title,statusbar,h1,h2,h3;
     JTextArea areaProp,areaContr,areaInfo;
@@ -38,10 +39,7 @@ public class GuiBatallaNaval extends JFrame implements ActionListener{
             // TODO Auto-generated catch block
             e.printStackTrace();
         }
-        jugAtendedor.iniciar();
         init();
-        jugador1.my_Tablero.tableroContrincante(jugAtendedor.getTablero());
-        jugAtendedor.setTableroCont(jugador1.my_Tablero.tableroProp);
         //initTab();
     }
     public void refresh(){
@@ -99,22 +97,32 @@ public class GuiBatallaNaval extends JFrame implements ActionListener{
         this.setLocationRelativeTo(null);
         this.setLayout(new BorderLayout(5,5));
         panel_inf=new JPanel();
+        panel_inf.setLayout(new FlowLayout());
         panel_inf.setBackground(new Color(23, 32, 42));
         panel_inf.setPreferredSize(new DimensionUIResource(1100,50));
         this.add(panel_inf,BorderLayout.SOUTH);
         btn_disparar=new JButton("Disparar");
+        btn_disparar.setEnabled(false);
         btn_disparar.addActionListener(this);
+        btn_ceder=new JButton("Ceder Turno");
+        btn_ceder.setEnabled(false);
+        btn_ceder.addActionListener(this);
         panel_inf.add(btn_disparar);
+        panel_inf.add(btn_ceder);
         panel_der=new JPanel();
         panel_der.setLayout(new BorderLayout(1,1));
-        areaInfo=new JTextArea("¡A jugar!");
+        areaInfo=new JTextArea(" ¡A jugar!\n");
+        areaInfo.setPreferredSize(new DimensionUIResource(290,600));
         areaInfo.setOpaque(true);
-        areaInfo.setBackground(new Color(101, 130, 176));
+        areaInfo.setBackground(new Color(139, 217, 253));
         areaInfo.setEditable(false);
-        areaInfo.setForeground(Color.white);;
-        JLabel lb=new JLabel("Batalla Naval ");
+        areaInfo.setForeground(Color.black);;
+        Font fuente2= new Font("",2,20);
+        areaInfo.setFont(fuente2);
+        JLabel lb=new JLabel(" Batalla Naval ");
         lb.setOpaque(true);
-        lb.setBackground(new Color(101, 154, 241));
+        lb.setBackground(new Color(8, 69, 98));
+        lb.setForeground(Color.WHITE);
         Font fuente= new Font("",3,20);
         lb.setFont(fuente);
         panel_der.add(lb,BorderLayout.NORTH);
@@ -128,18 +136,35 @@ public class GuiBatallaNaval extends JFrame implements ActionListener{
         btn_1vSystem.addActionListener(this);
         panel_sup.add(btn_1vSystem);
         btn_1vs1=new JButton("[1] vs [1]");
+        btn_1vs1.setEnabled(false);
         btn_1vs1.addActionListener(this);
         panel_sup.add(btn_1vs1);
-        btn_MostrarGan=new JButton("Ganadores");
+        btn_MostrarGan=new JButton("Jugadores");
         btn_MostrarGan.addActionListener(this);
         btn_MostrarGan.setEnabled(false);
         panel_sup.add(btn_MostrarGan);
-        btn_guardar=new JButton("Guardar");
+        btn_guardar=new JButton("Guardar Info");
         btn_guardar.setEnabled(false);
         btn_guardar.addActionListener(this);
         panel_sup.add(btn_guardar);
         this.add(panel_sup,BorderLayout.NORTH);
-    }    
+    }  
+    public void verifiJug1(){
+        if (!jugador1.my_Tablero.quedanBarcos()) {
+            areaInfo.setText(jugador1.nombre+" GANADOR");
+            JOptionPane.showMessageDialog(null,"El jugador "+jugador1.nombre+" ha ganado");
+            GuiBatallaNaval gui2=new GuiBatallaNaval();
+            gui2.setVisible(true);
+        }
+    }  
+    public void verifiJugAtendedor(){
+        if (!jugAtendedor.jugadorSystem.my_Tablero.quedanBarcos()) {
+            areaInfo.setText(jugAtendedor.jugadorSystem+" GANADOR");
+            JOptionPane.showMessageDialog(null,"El jugador "+jugAtendedor.jugadorSystem.nombre+" ha ganado");
+            GuiBatallaNaval gui2=new GuiBatallaNaval();
+            gui2.setVisible(true);
+        }
+    } 
     public void init(){
         try {
             jugador1=new Jugador(0);
@@ -158,13 +183,19 @@ public class GuiBatallaNaval extends JFrame implements ActionListener{
     public void actionPerformed(ActionEvent e) {
         // TODO Auto-generated method stub
         if (e.getSource()==btn_disparar) {
+            verifiJug1();
             areaInfo.setText("");
             jugador1.my_Tablero.efectuarDisparos();
             refresh();
-            areaInfo.append(jugador1.nombre+" hizo 5 DISPAROS");
+            areaInfo.append(" "+jugador1.nombre+" hizo 5 DISPAROS");
+            btn_ceder.setEnabled(true);
+            btn_disparar.setEnabled(false);
         }
         if(e.getSource()==btn_1vSystem){
+            areaInfo.append(jugAtendedor.iniciar());
+            jugador1.my_Tablero.tableroContrincante(jugAtendedor.getTablero());
             jugador1.my_Tablero.arribarBarco();
+            jugAtendedor.setTableroCont(jugador1.my_Tablero.tableroProp);
             refresh();
             db=new DataBase();
             db.conectar();
@@ -175,6 +206,7 @@ public class GuiBatallaNaval extends JFrame implements ActionListener{
             }
             btn_MostrarGan.setEnabled(true);
             btn_guardar.setEnabled(true);
+            btn_disparar.setEnabled(true);
         }
         if (e.getSource()==btn_guardar) {
             cont++;
@@ -183,6 +215,14 @@ public class GuiBatallaNaval extends JFrame implements ActionListener{
         if (e.getSource()==btn_MostrarGan) {
             areaInfo.setText("");
             areaInfo.append(db.select());
+        }
+        if (e.getSource()==btn_ceder){
+            verifiJugAtendedor();
+            areaInfo.setText("System disparando...\n");
+            areaInfo.append(jugAtendedor.disp());
+            refresh();
+            btn_ceder.setEnabled(false);
+            btn_disparar.setEnabled(true);
         }
         
     }

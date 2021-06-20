@@ -207,18 +207,17 @@ public class Tablero extends JFrame{
                 if (tableroCont[y][x].equals("#\t")) {
                     tableroPropTiros[y][x]="@\t";
                     tableroCont[y][x]="O\t";
-                }else{
-                    tableroPropTiros[y][x]="O\t";
                 }
                 mostrarTableroPropTiros();
                 cont++;
             }
         }else{
-            JOptionPane.showMessageDialog(null,"SIN BARCOS");
+            JOptionPane.showMessageDialog(null,"SIN BARCOS CONTRINCANTES");
         }
         cont=0;
     }
-    public void efectuarDisparosSystem(){
+    public String efectuarDisparosSystem(){
+        String d="";
         if(quedanBarcos()){
             for(int i=0;i<5;i++) {
                 x=(int)(Math.random()*8);
@@ -226,18 +225,18 @@ public class Tablero extends JFrame{
                 if (tableroCont[y][x].equals("#\t")) {
                     //tableroProp[y][x]="@\t";
                     tableroCont[y][x]="@\t";
-                    System.out.println("YEAH");
+                    d+="Interceptado en ["+x+"]"+"["+y+"]\n";
                 }else{
-                    //tableroProp[y][x]="O\t";
-                    tableroCont[y][x]="O\t";
+                    d+= "Tiro al agua\n";
                 }
                 mostrarTableroProp();
                 cont++;
             }
         }else{
-            JOptionPane.showMessageDialog(null,"SIN BARCOS");
+            JOptionPane.showMessageDialog(null,"SIN BARCOS CONTRINCANTES");
         }
         cont=0;
+        return d;
     }
     public String[][] tabContrincante(){
         return tableroProp;
@@ -257,7 +256,8 @@ public class Tablero extends JFrame{
         return textContTiros;
     }
 
-    public void arribarBarcoSystem(){
+    public String arribarBarcoSystem(){
+        String s="System arribo\n";
         int num=0;
         for (int i = 0; i <5; i++) {
             x=(int)(Math.random()*8);
@@ -280,7 +280,7 @@ public class Tablero extends JFrame{
                             num++;
                         }
                     }
-                    JOptionPane.showMessageDialog(null,"Barco portaaviones arribado");
+                    s+=" Barco portaaviones arribado\n";
                     mostrarTableroProp();
                     break;
                 case 1:
@@ -298,7 +298,7 @@ public class Tablero extends JFrame{
                             num++;
                         }
                     }
-                    JOptionPane.showMessageDialog(null,"Barco acorazado arribado");
+                    s+=" Barco acorazado arribado\n";
                     mostrarTableroProp();
                     break;
                 case 2:
@@ -316,7 +316,7 @@ public class Tablero extends JFrame{
                             num++;
                         }
                     }
-                    JOptionPane.showMessageDialog(null,"Barco crucero arribado");
+                    s+=" Barco crucero arribado\n";
                     mostrarTableroProp();
                     break;
                 case 3:
@@ -334,7 +334,7 @@ public class Tablero extends JFrame{
                             num++;
                         }
                     }
-                    JOptionPane.showMessageDialog(null,"Barco submarino arribado");
+                    s+=" Barco submarino arribado\n";
                     mostrarTableroProp();
                     break;
                 case 4:
@@ -352,7 +352,7 @@ public class Tablero extends JFrame{
                             num++;
                         }
                     }
-                    JOptionPane.showMessageDialog(null,"Barco destructor arribado");
+                    s+=" Barco destructor arribado\n";
                     mostrarTableroProp();
                     break;
                 default:
@@ -361,6 +361,7 @@ public class Tablero extends JFrame{
             barco++;
         }
         barco=0;
+        return s;
     }
     /*public void initComponents(){
         this.setSize(900,500);

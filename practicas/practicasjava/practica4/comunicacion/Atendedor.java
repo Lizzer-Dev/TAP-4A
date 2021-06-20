@@ -13,8 +13,8 @@ public class Atendedor extends Thread{
     BufferedReader in;
     PrintWriter out;
     List<Socket> sockets;
-    Tablero tablero;
-    Jugador jugadorSystem;
+    public Tablero tablero;
+    public Jugador jugadorSystem;
 
     public Atendedor() throws IOException {
         jugadorSystem=new Jugador(1);
@@ -29,14 +29,26 @@ public class Atendedor extends Thread{
     public String[][] getTablero(){
         return jugadorSystem.my_Tablero.tableroProp;
     }
-    public void iniciar(){
+    public String iniciar(){
+        String s="";
         try {
-            jugadorSystem.my_Tablero.arribarBarcoSystem();
-            Thread.sleep(1000);
-            jugadorSystem.my_Tablero.efectuarDisparosSystem();
+            s=jugadorSystem.my_Tablero.arribarBarcoSystem();
+            Thread.sleep(3000);
         } catch (Exception e) {
             //TODO: handle exception
         }
+        return s;
+    }
+    public String disp(){
+        String s="";
+        try {
+            s=jugadorSystem.my_Tablero.efectuarDisparosSystem();
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+        return s;
     }
     public void run() {
         
