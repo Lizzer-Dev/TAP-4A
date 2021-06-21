@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProjectClima.MainPage">
+
+    <StackLayout BackgroundColor="#04376F" Padding="40,20">
+        <Label Text="Clima Diario" TextColor="LightBlue" FontSize="Title" HorizontalTextAlignment="Center" FontFamily="Bold" />
+        <Image Source="clima.png"/>
+        <Grid Margin="20,35,20,20">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.4*" />
+                <ColumnDefinition Width="0.6*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="40" />
+                <RowDefinition Height="40" />
+                <RowDefinition Height="40" />
+                <RowDefinition Height="40" />
+                <RowDefinition Height="40" />
+                <RowDefinition Height="40" />
+                <RowDefinition Height="40" />
+            </Grid.RowDefinitions>
+            <Entry x:Name="cityEntry"
+               Placeholder="Ciudad"
+               PlaceholderColor="LightBlue"
+               TextColor="LightBlue"
+               Grid.ColumnSpan="2"
+                />
+            <Button Grid.ColumnSpan="2"
+                BackgroundColor="#2D8FF7"
+                Grid.Row="1"
+                Text="Obtener Clima"
+                Clicked="OnButtonClicked" />
+            <Label Grid.Row="2"
+               Text="Localidad:" 
+                   TextColor="LightBlue"
+                   FontSize="Medium"
+                   />
+            <Label Grid.Row="2"
+               Grid.Column="1"
+                   TextColor="LightBlue"
+                   FontSize="Medium"
+               Text="{Binding Title}" />
+            <Label Grid.Row="3"
+                   TextColor="LightBlue"
+                   FontSize="Medium"
+               Text="Temperatura:" />
+            <Label Grid.Row="3"
+                   TextColor="LightBlue"
+                   FontSize="Medium"
+               Grid.Column="1"
+               Text="{Binding Main.Temperature}" />
+            <Label Grid.Row="4"
+                   TextColor="LightBlue"
+                   FontSize="Medium"
+               Text="Vientos:" />
+            <Label Grid.Row="4"
+                   TextColor="LightBlue"
+                   FontSize="Medium"
+               Grid.Column="1"
+               Text="{Binding Wind.Speed}" />
+            <Label Grid.Row="5"
+                   TextColor="LightBlue"
+                   FontSize="Medium"
+               Text="Humedad:" />
+            <Label Grid.Row="5"
+                   TextColor="LightBlue"
+                   FontSize="Medium"
+               Grid.Column="1"
+               Text="{Binding Main.Humidity}" />
+            <Label Grid.Row="6"
+                   TextColor="LightBlue"
+                   FontSize="Medium"
+               Text="Visibilidad:" />
+            <Label Grid.Row="6"
+                   TextColor="LightBlue"
+                   FontSize="Medium"
+               Grid.Column="1"
+               Text="{Binding Weather[0].Visibility}" />
+        </Grid>
+    </StackLayout>
+
+
+</ContentPage>
